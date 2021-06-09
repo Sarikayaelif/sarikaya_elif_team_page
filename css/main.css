@@ -1,0 +1,97 @@
+﻿@charset "UTF-8";
+
+body { 
+	font-family: Arial, times, sans-serif; 
+	font-size: 24px; 
+	color: black; 
+	background-color: #ccc; 
+}
+
+h1, h2, h3, h4 { 
+	text-align: center; 
+	width:100%; 
+	cursor:pointer; 
+	text-shadow: 0 0 0 #fff; 
+}
+
+h2 { 
+	font-family: arial black, times, sans-serif; 
+	font-size: 1.5em; 
+	transition:all .5s; 
+}
+
+h2:hover{ 
+	text-shadow: 0 0 10px #666;
+	color: #dba868; 
+}
+h3 { 
+	font-size: 1.2em; 
+	transition:all .5s; 
+}
+h3:hover{ 
+	text-shadow: 0 0 10px #333; 
+	color: #dba868;
+}
+
+
+.hidden { display: none; }
+
+#siteContainer { 
+	margin: 50px; 
+	position:relative; 
+}
+#first { 
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center; 
+	overflow:hidden; 
+	transition:all .5s; 
+	height:344px; 
+}
+#first img{ 
+    animation: slideIn 2s ease-out 1, fadeIn 2s ease-out 1;
+ }
+
+#second { 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+	overflow:hidden; 
+	transition:all .5s; 
+	height:0px;
+}
+#second:hover img { animation: slideIn 2s ease-out 1, fadeIn 2s ease-out 1; }
+
+
+#third { 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	background:rgba(0,0,0, .5); 
+	z-index:9; 
+	overflow:hidden;
+    transition:all .5s;
+    height:0%; 
+    width:0%;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+#third div{ 
+	width: 500px; 
+	height: 250px; 
+	position:absolute; 
+	z-index:9; 
+	top:calc(50% - 100px); 
+	left:calc(50% - 250px);
+    padding:15px; 
+    background-color: seashell;  
+}
+
